@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+	<name>gscam-test</name>
+	<version>1.0.0</version>
+	<description>Hornet 7.0 package for OrangePi 4</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+	<maintainer email="ltzehan13@gmail.com">Lee Tze Han</maintainer>
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+	<license>MIT</license>
+
+	<buildtool_depend>catkin</buildtool_depend>
+	<build_depend>gscam</build_depend>
+	<run_depend>gscam</run_depend>
+
+</package>

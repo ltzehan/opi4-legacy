@@ -1,0 +1,8 @@
+prefix=/home/orangepi/opi4-legacy/catkin_ws/devel/.private/gscam-test
+
+Name: gscam-test
+Description: Description of gscam-test
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

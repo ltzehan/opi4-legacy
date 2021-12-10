@@ -1,0 +1,1 @@
+/home/orangepi/opi4-legacy/catkin_ws/devel/.private/gscam-test/lib/pkgconfig/gscam-test.pc

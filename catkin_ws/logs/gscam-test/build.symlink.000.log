@@ -1,0 +1,3 @@
+Symlinking /home/orangepi/opi4-legacy/catkin_ws/devel/share/gscam-test/cmake/gscam-testConfig.cmake
+Symlinking /home/orangepi/opi4-legacy/catkin_ws/devel/share/gscam-test/cmake/gscam-testConfig-version.cmake
+Symlinking /home/orangepi/opi4-legacy/catkin_ws/devel/lib/pkgconfig/gscam-test.pc

@@ -1,0 +1,1 @@
+/home/orangepi/opi4-legacy/catkin_ws/devel/.private/gscam-test/share/gscam-test/cmake/gscam-testConfig.cmake
