@@ -1,0 +1,4 @@
+[submodule "kernel-build/linux-orangepi"]
+	path = kernel-build/linux-orangepi
+	url = https://github.com/orangepi-xunlong/linux-orangepi
+	branch = orange-pi-4.4-rockchip64
