@@ -1,0 +1,39 @@
+Format: 1.8
+Date: Thu, 16 Dec 2021 02:02:40 +0800
+Source: linux-4.4.179-rk3399-can
+Binary: linux-dtb--can linux-headers--can linux-image--can
+Architecture: source arm64
+Version: 4.4.179-rk3399-can-2
+Distribution: focal
+Urgency: low
+Maintainer: Blurry Fish Butt <root@feliks-2.localdomain>
+Changed-By: Blurry Fish Butt <root@feliks-2.localdomain>
+Description:
+ linux-dtb--can - Linux DTB, version 4.4.179-rk3399-can
+ linux-headers--can - Linux kernel headers for 4.4.179-rk3399-can on
+ linux-image--can - Linux kernel, version 4.4.179-rk3399-can
+Changes:
+ linux-4.4.179-rk3399-can (4.4.179-rk3399-can-2) focal; urgency=low
+ .
+   * Custom built Linux kernel.
+Checksums-Sha1:
+ 17344226709a2d33a0b0c9fcc72de61eb4c88adb 1322 linux-4.4.179-rk3399-can_4.4.179-rk3399-can-2.dsc
+ e2a9f7a1b3f2bed7e4d8c21b6193b25f3ad0bd21 178847803 linux-4.4.179-rk3399-can_4.4.179-rk3399-can.orig.tar.gz
+ d6012f87a5c07120ef3ba9614d185dae3f2430ca 1419 linux-4.4.179-rk3399-can_4.4.179-rk3399-can-2.debian.tar.gz
+ 6fbf36bb570c7a39994dbade4185848b0f8bfe3d 401256 linux-dtb--can_4.4.179-rk3399-can-2_arm64.deb
+ 47530c3e0bc69dff82e87382baa79fc8fe748a87 9828656 linux-headers--can_4.4.179-rk3399-can-2_arm64.deb
+ ed9a9ea5deaf069402d7fcb4e7b81dd960ab41cd 8943328 linux-image--can_4.4.179-rk3399-can-2_arm64.deb
+Checksums-Sha256:
+ d4a97680d13377bfc0a1b0968d6776c568f2d4284663150fb012ff40f31e827c 1322 linux-4.4.179-rk3399-can_4.4.179-rk3399-can-2.dsc
+ 914b7a5813e56bfee4442d364ef747ee6341a18de04fc42a48ae08843e357fab 178847803 linux-4.4.179-rk3399-can_4.4.179-rk3399-can.orig.tar.gz
+ f9652d5460f918f344c3186bad6d88834cc4b6515e0ee31bbf0e51a2002c5eb5 1419 linux-4.4.179-rk3399-can_4.4.179-rk3399-can-2.debian.tar.gz
+ 51b2feae0c81f3ece80c9ac2fc63c791ef25a6572ead1a980eacce9887a6d421 401256 linux-dtb--can_4.4.179-rk3399-can-2_arm64.deb
+ def591b9034563397a3b6e9bb1cc9236a01a5bc946e9d4339af389df64e4951f 9828656 linux-headers--can_4.4.179-rk3399-can-2_arm64.deb
+ dbc435dc0e42367877375fce43e263fa17e06047571fa3fb05a5f66d5fd0acf2 8943328 linux-image--can_4.4.179-rk3399-can-2_arm64.deb
+Files:
+ 4c70dc292668e7f8ec8479ce585247c4 1322 kernel optional linux-4.4.179-rk3399-can_4.4.179-rk3399-can-2.dsc
+ e25b3ef01607ca6ad45ed74e8fe53f68 178847803 kernel optional linux-4.4.179-rk3399-can_4.4.179-rk3399-can.orig.tar.gz
+ b97b75c8b9d0309f927251ce42887c57 1419 kernel optional linux-4.4.179-rk3399-can_4.4.179-rk3399-can-2.debian.tar.gz
+ f33eda8679f867044d985664d7ea87b2 401256 kernel optional linux-dtb--can_4.4.179-rk3399-can-2_arm64.deb
+ ee9617f912f8546a509529d035531f2b 9828656 kernel optional linux-headers--can_4.4.179-rk3399-can-2_arm64.deb
+ 736dab1b1e20a8df6ae8dc01adf78cec 8943328 kernel optional linux-image--can_4.4.179-rk3399-can-2_arm64.deb
