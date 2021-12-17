@@ -1,70 +1,71 @@
- /dts-v1/;
- /plugin/;
- 
- / {
-	compatible = "rockchip,rk3399";
-	description = "MCP2515 Overlay for OrangePi 4";
- 
-	fragment@0 {
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "rockchip,rk3399";
+    description = "MCP2515 Overlay for OrangePi 4";
+
+    fragment@0 {
         target = <&spi1>;
         __overlay__ {
             status = "okay";
-			spidev@0 {
-				status = "disabled";
-			};
+            spidev@0 {
+                status = "disabled";
+            };
         };
     };
 
-	/* SPI_RXD/SPI_TXD shared with UART4_RX/UART4_TX */
-	/* uart4 is enabled by default in armbian image */
-	fragment@1 {
-		target = <&uart4>;
-		__overlay__ {
-			status = "disabled";
-		}
-	}
+    /* SPI_RXD/SPI_TXD shared with UART4_RX/UART4_TX */
+    /* uart4 is enabled by default in armbian image */
+    fragment@1 {
+        target = <&uart4>;
+        __overlay__ {
+            status = "disabled";
+        };
+    };
 
-	 /* MCP2515 Interrupt */
-	 fragment@2 {
-		 target = <&gpio1>;
-		 __overlay__ {
-			 /* Using GPIO1_D0 (56; RK_PD0) */
-			 can0_pin_irq: can0_pin_irq {
-				 rockchip,pins = <1 56 0 &pcfg_output_low>;
-			 };
-		 };
-	 };
- 
-	 /* MCP2515 Clock/Oscillator */
-	 fragment@3 {
-		 target-path = "/";
-		 __overlay__ {
-			 can0_osc: can0_osc {
-				 compatible = "fixed-clock";
-				 #clock-cells = <0>;
-				 clock-frequency  = <16000000>;
-			 };
-		 };
-	 };
- 
-	 /* SPI Configuration */
-	fragment@4 {
-		target = <&spi1>;
-		__overlay__ {
-			#address-cells = <1>;
-			#size-cells = <0>;
-			can0: mcp2515@0 {
-				reg = <1>;
-				compatible = "microchip,mcp2515";
-				pinctrl-names = "default";
-				pinctrl-0 = <&can0_pin_irq>;
-				spi-max-frequency = <10000000>;
-				interrupt-parent = <&gpio1>;
-				interrupts = <56 0x2>; /* Not sure about this */
-				clocks = <&can0_osc>;
-			};
-		};
-	};
+    /* MCP2515 Clock/Oscillator */
+    fragment@2 {
+        target-path = "/";
+        __overlay__ {
+            can0_osc: can0_osc {
+                compatible = "fixed-clock";
+                #clock-cells = <0>;
+                clock-frequency  = <16000000>;
+          };
+        };
+    };
 
- };
- 
+    /* MCP2515 Interrupt */
+    fragment@3 {
+        target = <&pinctrl>;
+        __overlay__ {
+            /* Using GPIO1_D0 (56; RK_PD0) */
+            can0_pin_irq: can0_pin_irq {
+                  rockchip,pins = <1 24 0 &pcfg_pull_up>;
+            };
+        };
+    };
+
+    /* SPI Configuration */
+    fragment@4 {
+        target = <&spi1>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+            can0: mcp2515@0 {
+                reg = <0>;
+                compatible = "microchip,mcp2515";
+                pinctrl-names = "default";
+                pinctrl-0 = <&can0_pin_irq>;
+                spi-max-frequency = <10000000>;
+                interrupt-parent = <&gpio1>;
+                interrupts = <24 0x2>; /* 0x2: High-to-low edge triggered */
+                clocks = <&can0_osc>;
+                status = "okay";
+            };
+        };
+    };
+
+};
+
