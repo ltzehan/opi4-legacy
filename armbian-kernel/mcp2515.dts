@@ -60,7 +60,7 @@
                 pinctrl-0 = <&can0_pin_irq>;
                 spi-max-frequency = <10000000>;
                 interrupt-parent = <&gpio1>;
-                interrupts = <24 0x2>; /* 0x2: High-to-low edge triggered */
+                interrupts = <24 0x8>; /* 0x8: Low level-sensitive */
                 clocks = <&can0_osc>;
                 status = "okay";
             };
