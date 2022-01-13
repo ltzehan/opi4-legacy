@@ -189,7 +189,7 @@
     
                 port {
                     ucam_out0: endpoint {
-                        remote-endpoint = < &mipi_in_ucam1 >;
+                        remote-endpoint = < &mipi_in_ucam0 >;
                         data-lanes = < 0x01 0x02 >;
                     };
                 };
